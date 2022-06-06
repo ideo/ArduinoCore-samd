@@ -69,6 +69,8 @@ def build_upload(mcu, name, extra_flags):
     
     if ('SAMD51P20A' in extra_flags) or ('SAMD51J20A' in extra_flags):
         flash_size = 1032192
+    elif ('SAMD21E17' in extra_flags):
+        flash_size = 131072
     else:
         flash_size = mcu_dict[mcu]['flash_size']
     print("{}.upload.maximum_size={}".format(name, flash_size))

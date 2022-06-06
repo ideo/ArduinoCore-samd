@@ -75,3 +75,4 @@ ideo_eyeo_flower.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 ideo_eyeo_flower.menu.debug.off=Off
 ideo_eyeo_flower.menu.debug.on=On
 ideo_eyeo_flower.menu.debug.on.build.flags.debug=-g
+

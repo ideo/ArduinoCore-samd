@@ -1,0 +1,72 @@
+{
+  "packages": [
+    {
+      "name": "ideo",
+      "maintainer": "IDEO",
+      "websiteURL": "https://www.ideo.com/",
+      "email": "info@ideo.com",
+      "help": {
+        "online": "https://www.ideo.com/"
+      },
+      "platforms": [
+        {
+          "name": "IDEO SAMD Boards",
+          "architecture": "samd",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/ideo-samd-1.0.0.tar.bz2",
+          "archiveFileName": "ideo-samd-1.0.0.tar.bz2",
+          "checksum": "SHA-256:fc745eacdfbcb20ab6878f2c2258bbd68503c018efc91c9b43b58a84eec8c7c2",
+          "size": "1475450",
+          "boards": [
+            {
+              "name": "Eyeo Flower"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "adafruit",
+              "name": "arm-none-eabi-gcc",
+              "version": "9-2019q4"
+            },
+            {
+              "packager": "ideo",
+              "name": "bossac",
+              "version": "1.8.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino7"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS",
+              "version": "5.4.0"
+            },
+            {
+              "packager": "adafruit",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.2"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "bossac",
+          "version": "1.8.0",
+          "systems": [
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/bossac-1.8.0-x86_64-apple-darwin.tar.gz",
+              "archiveFileName": "bossac-1.8.0-x86_64-apple-darwin.tar.gz",
+              "checksum": "SHA-256:210d1690ca670706d049f41e71d14da60bb4b875ee0a2e6dd8e82bd4a876fda1",
+              "size": "40313"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

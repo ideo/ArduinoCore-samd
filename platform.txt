@@ -141,7 +141,7 @@ tools.bossac.upload.network_pattern="{network_cmd}" -address {serial.port} -port
 
 # v1.8.0
 
-tools.bossac18.path={runtime.tools.bossac-1.8.0-48-gb176eee.path}
+tools.bossac18.path={runtime.tools.bossac-1.8.0.path}
 tools.bossac18.cmd=bossac
 
 tools.bossac18.upload.params.verbose=-i -d
