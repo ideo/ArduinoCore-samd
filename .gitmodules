@@ -4,3 +4,6 @@
 [submodule "libraries/Adafruit_ZeroDMA"]
 	path = libraries/Adafruit_ZeroDMA
 	url = https://github.com/adafruit/Adafruit_ZeroDMA
+[submodule "libraries/Mozzi"]
+	path = libraries/Mozzi
+	url = https://github.com/sensorium/Mozzi.git
