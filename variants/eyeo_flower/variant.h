@@ -78,18 +78,8 @@ extern "C"
 
 // LEDs
 #define PIN_LED_13           (13u)
-#define PIN_LED_RXL          (21u)
-#define PIN_LED_TXL          (22u)
 #define PIN_LED              PIN_LED_13
-#define PIN_LED2             PIN_LED_RXL
-#define PIN_LED3             PIN_LED_TXL
 #define LED_BUILTIN          PIN_LED_13
-// DotStar LED
-#define INTERNAL_DS_DATA     (7u)
-#define INTERNAL_DS_CLK      (8u)
-#define PIN_DOTSTAR_DATA     (7u)
-#define PIN_DOTSTAR_CLK      (8u)
-#define DOTSTAR_NUM          (1u)
 
 /*
  * Analog pins
@@ -114,41 +104,11 @@ static const uint8_t DAC0 = PIN_DAC0;
  * Serial interfaces
  */
 
-// Serial1 (sercom 0)
-#define PIN_SERIAL1_RX       (3ul) // PA07
-#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
-#define PIN_SERIAL1_TX       (4ul) // PA06
-#define PAD_SERIAL1_TX       (UART_TX_PAD_2)
-
-/*
- * SPI Interfaces
- */
-#define SPI_INTERFACES_COUNT 1 // shared with I2C/UART (can't do both)
-
-#define PIN_SPI_MISO         (6u)  // PA09 same as D2
-#define PIN_SPI_MOSI         (4u)
-#define PIN_SPI_SCK          (3u)
-#define PERIPH_SPI           sercom0
-#define PAD_SPI_TX           SPI_PAD_2_SCK_3
-#define PAD_SPI_RX           SERCOM_RX_PAD_1
-
-static const uint8_t SS	  = 5 ;	// SERCOM0 last PAD is present on 5 but HW SS isn't used. Set here only for reference.
-static const uint8_t MOSI = PIN_SPI_MOSI ;
-static const uint8_t MISO = PIN_SPI_MISO ;
-static const uint8_t SCK  = PIN_SPI_SCK ;
-
-/*
- * Wire Interfaces
- */
-#define WIRE_INTERFACES_COUNT 1
-
-#define PIN_WIRE_SDA         (0u)
-#define PIN_WIRE_SCL         (2u)
-#define PERIPH_WIRE          sercom2
-#define WIRE_IT_HANDLER      SERCOM2_Handler
-
-static const uint8_t SDA = PIN_WIRE_SDA;
-static const uint8_t SCL = PIN_WIRE_SCL;
+// Serial1 (sercom 0) - not currently available
+// #define PIN_SERIAL1_RX       (3ul) // PA07
+// #define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
+// #define PIN_SERIAL1_TX       (4ul) // PA06
+// #define PAD_SERIAL1_TX       (UART_TX_PAD_2)
 
 /*
  * USB
@@ -176,7 +136,7 @@ extern SERCOM sercom1;
 extern SERCOM sercom2;
 extern SERCOM sercom3;
 
-extern Uart Serial1;
+// extern Uart Serial1;
 
 #endif
 
@@ -198,8 +158,8 @@ extern Uart Serial1;
 #define SERIAL_PORT_USBVIRTUAL      Serial
 #define SERIAL_PORT_MONITOR         Serial
 // Serial has no physical pins broken out, so it's not listed as HARDWARE port
-#define SERIAL_PORT_HARDWARE        Serial1
-#define SERIAL_PORT_HARDWARE_OPEN   Serial1
+// #define SERIAL_PORT_HARDWARE        Serial1
+// #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
 #endif /* _VARIANT_EYEO_FLOWER_ */
 

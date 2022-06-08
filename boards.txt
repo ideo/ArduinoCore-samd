@@ -27,10 +27,8 @@ menu.debug=Debug
 ideo_eyeo_flower.name=IDEO Eyeo Flower (SAMD21)
 
 # VID/PID for Bootloader, Arduino & CircuitPython
-ideo_eyeo_flower.vid.0=0x239A
-ideo_eyeo_flower.pid.0=0x801E
-ideo_eyeo_flower.vid.1=0x239A
-ideo_eyeo_flower.pid.1=0x001E
+ideo_eyeo_flower.vid.0=0x1209
+ideo_eyeo_flower.pid.0=0xE7E0
 
 # Upload
 ideo_eyeo_flower.upload.tool=bossac18
@@ -53,8 +51,8 @@ ideo_eyeo_flower.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
 ideo_eyeo_flower.build.openocdscript=openocd_scripts/eyeo_flower.cfg
 ideo_eyeo_flower.build.variant=eyeo_flower
 ideo_eyeo_flower.build.variant_system_lib=
-ideo_eyeo_flower.build.vid=0x239A
-ideo_eyeo_flower.build.pid=0x801E
+ideo_eyeo_flower.build.vid=0x1209
+ideo_eyeo_flower.build.pid=0xE7E0
 ideo_eyeo_flower.bootloader.tool=openocd
 ideo_eyeo_flower.bootloader.file=eyeo_flower/bootloader-eyeo_flower.bin
 
@@ -75,4 +73,60 @@ ideo_eyeo_flower.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 ideo_eyeo_flower.menu.debug.off=Off
 ideo_eyeo_flower.menu.debug.on=On
 ideo_eyeo_flower.menu.debug.on.build.flags.debug=-g
+
+
+# -----------------------------------
+# IDEO Eyeo Flower Test (SAMD21)
+# -----------------------------------
+ideo_eyeo_flower_test.name=IDEO Eyeo Flower Test (SAMD21)
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+ideo_eyeo_flower_test.vid.0=0x239A
+ideo_eyeo_flower_test.pid.0=0x801E
+ideo_eyeo_flower_test.vid.1=0x239A
+ideo_eyeo_flower_test.pid.1=0x001E
+
+# Upload
+ideo_eyeo_flower_test.upload.tool=bossac18
+ideo_eyeo_flower_test.upload.protocol=sam-ba
+ideo_eyeo_flower_test.upload.maximum_size=131072
+ideo_eyeo_flower_test.upload.offset=0x2000
+ideo_eyeo_flower_test.upload.use_1200bps_touch=true
+ideo_eyeo_flower_test.upload.wait_for_upload_port=true
+ideo_eyeo_flower_test.upload.native_usb=true
+
+# Build
+ideo_eyeo_flower_test.build.mcu=cortex-m0plus
+ideo_eyeo_flower_test.build.f_cpu=48000000L
+ideo_eyeo_flower_test.build.usb_product="Eyeo Flower Test"
+ideo_eyeo_flower_test.build.usb_manufacturer="IDEO"
+ideo_eyeo_flower_test.build.board=EYEO_FLOWER
+ideo_eyeo_flower_test.build.core=arduino
+ideo_eyeo_flower_test.build.extra_flags=-D__SAMD21E17A__ -DCRYSTALLESS -DIDEO_EYEO_FLOWER -DARDUINO_SAMD_ZERO -DARM_MATH_CM0PLUS {build.usb_flags}
+ideo_eyeo_flower_test.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+ideo_eyeo_flower_test.build.openocdscript=openocd_scripts/eyeo_flower.cfg
+ideo_eyeo_flower_test.build.variant=eyeo_flower
+ideo_eyeo_flower_test.build.variant_system_lib=
+ideo_eyeo_flower_test.build.vid=0x239A
+ideo_eyeo_flower_test.build.pid=0x801E
+ideo_eyeo_flower_test.bootloader.tool=openocd
+ideo_eyeo_flower_test.bootloader.file=eyeo_flower/bootloader-eyeo_flower.bin
+
+# Menu
+ideo_eyeo_flower_test.menu.opt.small=Small (-Os) (standard)
+ideo_eyeo_flower_test.menu.opt.small.build.flags.optimize=-Os
+ideo_eyeo_flower_test.menu.opt.fast=Fast (-O2)
+ideo_eyeo_flower_test.menu.opt.fast.build.flags.optimize=-O2
+ideo_eyeo_flower_test.menu.opt.faster=Faster (-O3)
+ideo_eyeo_flower_test.menu.opt.faster.build.flags.optimize=-O3
+ideo_eyeo_flower_test.menu.opt.fastest=Fastest (-Ofast)
+ideo_eyeo_flower_test.menu.opt.fastest.build.flags.optimize=-Ofast
+ideo_eyeo_flower_test.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+ideo_eyeo_flower_test.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+ideo_eyeo_flower_test.menu.usbstack.arduino=Arduino
+ideo_eyeo_flower_test.menu.usbstack.tinyusb=TinyUSB
+ideo_eyeo_flower_test.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+ideo_eyeo_flower_test.menu.debug.off=Off
+ideo_eyeo_flower_test.menu.debug.on=On
+ideo_eyeo_flower_test.menu.debug.on.build.flags.debug=-g
 

@@ -32,6 +32,45 @@
   EExt_Interrupts ulExtInt ;
 } PinDescription ;
  */
+
+/*
+  PA00 - WS2812B LEDs
+  PA02 - DAC (Speaker Out)
+  PA06 - Petal PWM 4p
+  PA07 - Petal PWM 6p
+  PA08 - LM4890MX ~SD (Amp shutdown)
+  PA09 - Mic Input
+  PA10 - Red LED
+  PA14 - Petal PWM 8p
+  PA15 - Petal PWM 9p
+  PA16 - Petal PWM 10p
+  PA17 - Petal PWM 12p
+  PA18 - Petal PWM 2p
+  PA19 - Petal PWM 3p
+  PA24 - USB/DM
+  PA25 - USB/DP
+  PA30 - SWCLK
+  PA31 - SWDIO
+
+// Potential arduino pin order
+  PA08 - LM4890MX ~SD (Amp shutdown)
+  PA00 - WS2812B LEDs
+  PA17 - Petal PWM 12p
+  PA18 - Petal PWM 2p
+  PA19 - Petal PWM 3p
+  PA06 - Petal PWM 4p
+  PA07 - Petal PWM 6p
+  PA14 - Petal PWM 8p
+  PA15 - Petal PWM 9p
+  PA16 - Petal PWM 10p
+  PA02 - DAC (Speaker Out)
+  PA09 - Mic Input
+  PA10 - Red LED
+  PA24 - USB/DM
+  PA25 - USB/DP
+  PA30 - SWCLK
+  PA31 - SWDIO
+*/
 const PinDescription g_APinDescription[]=
 {
   // GPIO 0-4 on external pads
@@ -70,7 +109,7 @@ const PinDescription g_APinDescription[]=
   { PORTA, 10, PIO_DIGITAL, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // TX: SERCOM0/PAD[2]
 
   // GPIO 13 (LED)
-  { PORTA, 10, PIO_DIGITAL, (PIN_ATTR_DIGITAL), No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_10 }, // TX: SERCOM0/PAD[2]
+  { PORTA, 10, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM1_CH0, TCC1_CH0, EXTERNAL_INT_10 },
 
 
   // Digital 14 - 18, Analog A0-A4
@@ -92,17 +131,14 @@ const PinDescription g_APinDescription[]=
   { PORTA, 31, PIO_TIMER, PIN_ATTR_NONE, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE },
 
 
-  // Placeholder #21 & 22 for 'txled' and 'rxled'
-  { PORTA, 14, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM3_CH0, TC3_CH0, EXTERNAL_INT_14 },
-  { PORTA, 15, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM3_CH1, TC3_CH1, EXTERNAL_INT_15 },
+  // Petal PWM Channels
+  { PORTA, 14, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH4, TCC0_CH4, EXTERNAL_INT_14 },
+  { PORTA, 15, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH5, TCC0_CH5, EXTERNAL_INT_15 },
+  { PORTA, 16, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH6, TCC0_CH6, EXTERNAL_INT_0 },
+  { PORTA, 17, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH7, TCC0_CH7, EXTERNAL_INT_1 },
+  { PORTA, 18, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH2, TCC0_CH2, EXTERNAL_INT_2 },
+  { PORTA, 19, PIO_PWM_ALT, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM0_CH3, TCC0_CH3, EXTERNAL_INT_3 },
 
-
-  //23,24,25,26
-  { PORTA, 16, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM2_CH0, TCC2_CH0, EXTERNAL_INT_0 },
-  { PORTA, 17, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM2_CH1, TCC2_CH1, EXTERNAL_INT_1 },
-  { PORTA, 18, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM3_CH0, TC3_CH0, EXTERNAL_INT_2 },
-  { PORTA, 19, PIO_DIGITAL, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM|PIN_ATTR_TIMER), No_ADC_Channel, PWM3_CH1, TC3_CH1, EXTERNAL_INT_3 },
-  
 } ;
 
 const void* g_apTCInstances[TCC_INST_NUM+TC_INST_NUM]={ TCC0, TCC1, TCC2, TC3, TC4, TC5 } ;
@@ -113,10 +149,11 @@ SERCOM sercom1( SERCOM1 ) ;
 SERCOM sercom2( SERCOM2 ) ;
 SERCOM sercom3( SERCOM3 ) ;
 
+/* No hardware serial pins - TODO: investigate using spare petal pins for optional hardware serial
 Uart Serial1( &sercom0, PIN_SERIAL1_RX, PIN_SERIAL1_TX, PAD_SERIAL1_RX, PAD_SERIAL1_TX ) ;
 
 void SERCOM0_Handler()
 {
   Serial1.IrqHandler();
 }
-
+*/

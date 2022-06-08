@@ -166,5 +166,9 @@ build_global_menu()
 ######################## SAMD21
 
 make_board("SAMD21", "ideo_eyeo_flower", "eyeo_flower", 
-           "IDEO", "Eyeo Flower", "0x239A", ["0x801E", "0x001E"],
+           "IDEO", "Eyeo Flower", "0x1209", ["0xE7E0"],
+           "EYEO_FLOWER", "-D__SAMD21E17A__ -DCRYSTALLESS -DIDEO_EYEO_FLOWER", "eyeo_flower/bootloader-eyeo_flower.bin")
+
+make_board("SAMD21", "ideo_eyeo_flower_test", "eyeo_flower", 
+           "IDEO", "Eyeo Flower Test", "0x239A", ["0x801E", "0x001E"],
            "EYEO_FLOWER", "-D__SAMD21E17A__ -DCRYSTALLESS -DIDEO_EYEO_FLOWER", "eyeo_flower/bootloader-eyeo_flower.bin")
