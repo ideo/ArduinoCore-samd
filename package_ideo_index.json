@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/ideo-samd-1.0.0.tar.bz2",
           "archiveFileName": "ideo-samd-1.0.0.tar.bz2",
-          "checksum": "SHA-256:c57190b629b6c847b0598a14e5c502355337c1bd59366c04c61970cd82072a19",
-          "size": "1475411",
+          "checksum": "SHA-256:688e040a1456d4f628428693035531d465826edc34de08999d8e4ee6eb1fbf79",
+          "size": "1480055",
           "boards": [
             {
               "name": "Eyeo Flower"
