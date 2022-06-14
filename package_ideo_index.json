@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/ideo-samd-1.0.0.tar.bz2",
           "archiveFileName": "ideo-samd-1.0.0.tar.bz2",
-          "checksum": "SHA-256:688e040a1456d4f628428693035531d465826edc34de08999d8e4ee6eb1fbf79",
-          "size": "1480055",
+          "checksum": "SHA-256:58fb9e4a5b75cbcd8cd6979db503495cdaa45d7eb149905b0c958d8934ccba9b",
+          "size": "1479921",
           "boards": [
             {
               "name": "Eyeo Flower"
@@ -57,6 +57,20 @@
           "name": "bossac",
           "version": "1.8.0",
           "systems": [
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
+              "checksum": "SHA-256:e00c06445c45fb770e38a3082a7e44f7a71f9f032a93d48447733ceabc3d17f7",
+              "size": "810548"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-linux-gnu.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-linux-gnu.tar.gz",
+              "checksum": "SHA-256:e339de6680686b10cc062a3a08efb62b7a50ff2699919654bae0ced64ef4426a",
+              "size": "512934"
+            },
             {
               "host": "x86_64-apple-darwin",
               "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/bossac-1.8.0-x86_64-apple-darwin.tar.gz",

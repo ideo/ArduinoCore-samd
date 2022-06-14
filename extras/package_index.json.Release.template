@@ -58,6 +58,20 @@
           "version": "1.8.0",
           "systems": [
             {
+              "host": "i686-mingw32",
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
+              "checksum": "SHA-256:ed67f6ec47a6cfc7fbc518b6c0c56a2d58c89a939beced406cba6ea7c2a17e43",
+              "size": "809898"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-linux-gnu.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-linux-gnu.tar.gz",
+              "checksum": "SHA-256:e339de6680686b10cc062a3a08efb62b7a50ff2699919654bae0ced64ef4426a",
+              "size": "512934"
+            },
+            {
               "host": "x86_64-apple-darwin",
               "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v%%VERSION%%/bossac-1.8.0-x86_64-apple-darwin.tar.gz",
               "archiveFileName": "bossac-1.8.0-x86_64-apple-darwin.tar.gz",
