@@ -8,44 +8,12 @@
 */
 #define DEBUG 1
 
+#include "config.h"
 #include "lights.h"
 #include "voice.h"
 #include "microphone.h"
 #include "petals.h"
 
-///////////USER VARIABLES//////////////////////////////////////////////////////////////////////////////////
-
-#define PETAL_COUNT 3           // how many petals i have 
-#define LISTEN_DELAY 1000       // the delay between hearing a sound and emitting a sound
-#define DEFAULT_IDLE_TIME 10000 // how long should i wait to sing when everyone is quiet
-
-
-//what i react to
-#if PETAL_COUNT == 3
-int myTriggers[] = { NOTE_D6, NOTE_A5, NOTE_C6 };
-#elif PETAL_COUNT == 4
-int myTriggers[] = { NOTE_F5, NOTE_B5, NOTE_D6 };
-#else
-int myTriggers[] = { NOTE_F5, NOTE_A5 };
-#endif
-
-
-//what i emit
-#if PETAL_COUNT == 3
-#define NUM_NOTES 3
-int myNotes[] = { NOTE_F5, NOTE_B5, NOTE_D6 };
-#elif PETAL_COUNT == 4
-#define NUM_NOTES 3
-int myNotes[] = { NOTE_D6, NOTE_A5, NOTE_C6 };
-#else
-#define NUM_NOTES 6
-int myNotes[] = { NOTE_D6, NOTE_A5, NOTE_C6, NOTE_F5, NOTE_B5, NOTE_D6 };
-#endif
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#define NUM_SCALE_NOTES 6
-const int scaleNotes[] = { NOTE_D5, NOTE_F5, NOTE_A5, NOTE_B5, NOTE_C6, NOTE_D6 }; // define my musical language
 
 boolean isListening = false;                              //This keeps track of whether the device is listening for sounds or playing sounds
 byte noteStep;                                            //State machine state byte for playing the notes and triggering listening

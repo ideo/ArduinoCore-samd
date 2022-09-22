@@ -1,6 +1,8 @@
 #ifndef PETALS_H_
 #define PETALS_H_
 
+#include "config.h"
+
 // Defines for Petals
 #define PETAL12 2     
 #define PETAL2  3
