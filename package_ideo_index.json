@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/ideo-samd-1.0.0.tar.bz2",
           "archiveFileName": "ideo-samd-1.0.0.tar.bz2",
-          "checksum": "SHA-256:58fb9e4a5b75cbcd8cd6979db503495cdaa45d7eb149905b0c958d8934ccba9b",
-          "size": "1479921",
+          "checksum": "SHA-256:9ad5e12a89704be3022a920c942bc9a53fb854ba234a7637b12a6571c531bad8",
+          "size": "1480315",
           "boards": [
             {
               "name": "Eyeo Flower"
@@ -73,10 +73,10 @@
             },
             {
               "host": "x86_64-apple-darwin",
-              "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v1.0.0/bossac-1.8.0-x86_64-apple-darwin.tar.gz",
-              "archiveFileName": "bossac-1.8.0-x86_64-apple-darwin.tar.gz",
-              "checksum": "SHA-256:210d1690ca670706d049f41e71d14da60bb4b875ee0a2e6dd8e82bd4a876fda1",
-              "size": "40313"
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-apple-darwin20.6.0.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-apple-darwin20.6.0.tar.gz",
+              "checksum": "SHA-256:aed9cda7d1a3574c7a00f253cc31622e5b40c8b0c0aa62074deb2d2c0adf7aa4",
+              "size": "39641"
             }
           ]
         }
