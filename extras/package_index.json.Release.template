@@ -61,8 +61,8 @@
               "host": "i686-mingw32",
               "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
               "archiveFileName": "bossac-1.9.2-x86_64-w64-mingw32.tar.gz",
-              "checksum": "SHA-256:ed67f6ec47a6cfc7fbc518b6c0c56a2d58c89a939beced406cba6ea7c2a17e43",
-              "size": "809898"
+              "checksum": "SHA-256:e00c06445c45fb770e38a3082a7e44f7a71f9f032a93d48447733ceabc3d17f7",
+              "size": "810548"
             },
             {
               "host": "x86_64-pc-linux-gnu",
@@ -73,10 +73,10 @@
             },
             {
               "host": "x86_64-apple-darwin",
-              "url": "https://github.com/ideo/ArduinoCore-samd/releases/download/v%%VERSION%%/bossac-1.8.0-x86_64-apple-darwin.tar.gz",
-              "archiveFileName": "bossac-1.8.0-x86_64-apple-darwin.tar.gz",
-              "checksum": "SHA-256:210d1690ca670706d049f41e71d14da60bb4b875ee0a2e6dd8e82bd4a876fda1",
-              "size": "40313"
+              "url": "https://github.com/ideo/BOSSA/releases/download/1.9.2/bossac-1.9.2-x86_64-apple-darwin20.6.0.tar.gz",
+              "archiveFileName": "bossac-1.9.2-x86_64-apple-darwin20.6.0.tar.gz",
+              "checksum": "SHA-256:aed9cda7d1a3574c7a00f253cc31622e5b40c8b0c0aa62074deb2d2c0adf7aa4",
+              "size": "39641"
             }
           ]
         }
